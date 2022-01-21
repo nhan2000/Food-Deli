@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+$green :#27ae60;
+$black:#130f40;
+$white:#fff;
+$light-color:#666;
+$border:.1rem solid rgba(0,0,0,.2);
+$light-bg:#f7f7f7;
+$box-shadow: 0 1rem 1rem rgba(0,0,0,.05);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+@mixin font($size){
+    font-family: 'Satisfy', cursive;
+    font-size: $size;
+    color: $green;
+
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
+    &::-webkit-scrollbar{
+        width: 1rem;
+      }
+    
+      &::-webkit-scrollbar-track{
+        background: $white;
+      }
+    
+      &::-webkit-scrollbar-thumb{
+        background: $green;
+        border-radius: 5rem;
+      }
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    span {
+        @include font(3rem);
+    }
+    h3 {
+        font-size: 3rem;
+        color: $black;
+    }
+}
+
+.btn {
+    display: inline-block;
+    // nó sẽ là chiếm 1 dòng và chiều cao hay chiều rộng có thể thay đổi được cả margin padding
+    margin-top: 1rem;
+    padding: .7rem 1.8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: $white;
+    background: $green;
+    border-radius: .5rem;
+    &:hover {
+        background: $black;
+    }
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: $white;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: $black;
+
+        i {
+            padding-right: .5rem;
+            color: $green;
+        }
+    }
+    .navbar {
+        a {
+            font-size: 1.7rem;
+            margin: 0 1rem;
+            color: $light-color;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+    .icons div {
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 2rem;
+        background: $light-color;
+        color: $black;
+        border-radius: .5rem;
+        margin-left: .3rem;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+            color: white;
+            // background: $green;
+            background: $green;
+        }
+    }
+    
+}
+#menu-btn {
+    display: none;
+}
