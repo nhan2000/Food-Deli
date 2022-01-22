@@ -309,7 +309,7 @@ section {
     height: calc(100vh - 8.5rem);
     background: $white;
     padding: 0 2rem;
-    // display: none;
+    display: none;
     &.active {
         display: block;
 
@@ -339,6 +339,162 @@ section {
             color: $black;
             text-transform: none;
             width: 100%;
+        }
+        .remember {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label {
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: $light-color;
+            }
+        }
+        .btn {
+            margin: 1rem 0;
+            width: 100%;
+            text-align: center;
+        }
+        p {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            color: $light-color;
+
+            a {
+                color: $green;
+
+                &:hover {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    .content {
+        flex: 1 1 41rem;
+
+        span {
+            font-size: 2rem;
+            color: $green;
+        }
+        h3 {
+            font-size: 4rem;
+            color: $black;
+            padding-top: 1rem;
+        }
+        p {
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+    }
+    .image {
+        flex: 1 1 41rem;
+        margin: 2rem 0;
+        pointer-events: none;
+
+        .home-img {
+            width: 100%;
+            margin-top: 5rem;
+        }
+    }
+    .home-parallax-img {
+        position: absolute;
+        top: -10rem ;
+        right: -10rem;
+        width: 80vw;
+    }
+}
+
+.category {
+    @include grid(16rem);
+    padding-bottom: 5rem;
+    
+
+    .box {
+        padding: 2rem;
+        text-align: center;
+        border-radius: .5rem;
+        background: $light-bg;
+
+        &:hover {
+            background: $green;
+            h3 {
+                color: white;
+            }
+        }
+        img {
+            height: 7rem;
+
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: $black;
+        }
+
+    }
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background-color: $light-bg;
+
+    .image {
+        flex: 1 1 40rem;
+
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        flex: 1 1 40rem;
+
+        span {
+            @include font(3rem);
+        }
+    }
+    .title {
+        font-size: 3rem;
+        padding-top: .5rem;
+        color: $black;
+    }
+    p {
+        padding: 1rem 0;
+        line-height: 2;
+        font-size: 1.4rem;
+        color: $light-color;
+    }
+    .icons-container {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .icons {
+            flex: 1 1 20rem;
+            border-radius: .5rem;
+            background: $white;
+            box-shadow: $box-shadow;
+            display: flex;
+            align-items: center;
+            gap: 2rem ;
+            padding: 2rem;
         }
     }
 }
