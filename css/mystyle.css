@@ -268,6 +268,8 @@ section {
   background: #fff;
   padding: 0 2rem;
   display: none;
+  z-index: 1000;
+  display: none;
 }
 .login-form-container.active {
   display: block;
@@ -363,8 +365,6 @@ section {
 }
 .home .home-parallax-img {
   position: absolute;
-  top: -10rem;
-  right: -10rem;
   width: 80vw;
 }
 
@@ -829,6 +829,10 @@ section {
 }
 .footer .bottom .credit span {
   color: #27ae60;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=mystyle.css.map */

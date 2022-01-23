@@ -2,6 +2,7 @@ var searchForm =document.querySelector(".search-form-container");
 var cart = document.querySelector(".shopping-cart-container");
 var loginForm=document.querySelector(".login-form-container");
 var navbar =document.querySelector(".header .navbar");
+// var home=document.querySelector("#home");
 
 document.querySelector("#search-btn").onclick = ()=> {
     searchForm.classList.toggle('active');
@@ -18,9 +19,10 @@ document.querySelector("#cart-btn").onclick = ()=> {
 }
 
 document.querySelector('#login-btn').onclick = () =>{
-    loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
-    cart.classList.remove('active');    
+    cart.classList.remove('active');
+    loginForm.classList.toggle('active');
     navbar.classList.remove('active');
+    // home.classList.toggle('hidden');
 }
 

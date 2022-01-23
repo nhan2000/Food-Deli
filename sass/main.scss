@@ -310,6 +310,18 @@ section {
     background: $white;
     padding: 0 2rem;
     display: none;
+    z-index: 1000;
+
+    // position: fixed;
+    // top: 8.5rem;
+    // left: 0;
+    // right: 0;
+    // z-index: 1000;
+    // height: calc(100vh - 8.5rem);
+    // background: $white;
+    // overflow-y: scroll;
+    // padding-bottom: 8rem;
+    display: none;
     &.active {
         display: block;
 
@@ -413,8 +425,8 @@ section {
     }
     .home-parallax-img {
         position: absolute;
-        top: -10rem ;
-        right: -10rem;
+        // top: 80% ;
+        // right: -10px;
         width: 80vw;
     }
 }
@@ -958,4 +970,8 @@ section {
         }
       }
     }
+  }
+
+  .hidden {
+      display: none;
   }
